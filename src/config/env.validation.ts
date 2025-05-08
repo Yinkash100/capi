@@ -15,11 +15,8 @@ export const validate = (config: Record<string, unknown>) => {
     JWT_EXPIRATION: Joi.string().default('1d'),
     
     // Email
-    EMAIL_HOST: Joi.string().required(),
-    EMAIL_PORT: Joi.number().default(587),
-    EMAIL_USER: Joi.string().required(),
-    EMAIL_PASSWORD: Joi.string().required(),
-    EMAIL_FROM: Joi.string().email().required(),
+    SMTP_URL: Joi.string().required(),
+
     
     // Application
     APP_URL: Joi.string().required(),
